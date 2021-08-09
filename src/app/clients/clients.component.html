@@ -1,0 +1,17 @@
+
+        <section>
+            <mat-form-field class="form-fild">
+                <input matInput placeholder="first Name" [(ngModel)]="name">
+            </mat-form-field>
+            <mat-form-field class="form-fild">
+                <input matInput placeholder="age" type="number" [(ngModel)]="age">
+            </mat-form-field>
+            <button mat-mini-fab color="primary" (click)="save()">
+                <mat-icon>check</mat-icon>
+            </button>
+        </section>
+
+
+
+<br><br>
+<app-item-client *ngFor="let c of clients" [client]="c" (removeClient)="deleteClient(i)" ></app-item-client>
